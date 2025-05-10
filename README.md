@@ -1,37 +1,32 @@
 # My Making Of Project Manager AI Agent
 
-Hands on : Building a Practical AI Agent for Technical Architecture
+Hands on : How to leverage AI Agents for project management
 
 
 ## TL;DR
-This article shows you how to build an AI-powered solution architect tool that creates professional architecture solution after thoughtful planning from business requirements. Using Agno AI Agent framework (which btw, I liked the most) , streamlit for the frontend and LLM models through Groq API, this application helps businesses visualize complex architectures without technical diagram expertise. The system uses a modular design with separate UI, core engine, services, and utility components for easy maintenance and scalability.
+I built a project management system using three AI agents (task generator, scheduler, risk analyzer) that work together under a supervisor to create comprehensive healthcare project plans. The system uses Muliple Agents for healthcare expertise, with all configuration stored externally for flexibility. This approach shows how collaborative AI can transform business operations beyond simple automation.
 
-## Introduction:
-Ever wished you could just describe a complex system and have professional architecture diagrams appear instantly? That’s exactly what we’re building today. The Enterprise Architect AI Agent transforms plain English requirements into detailed technical diagrams that would normally take hours to create manually. By combining the latest language models with a sleek user interface, we’re putting the power of visual system design into anyone’s hands — no Visio expertise required.
 
 ## What’s This Article About?
-This article walks you through building an Enterprise Architect AI system that creates professional technical diagrams based on simple text requests. I’ll show you how we structured the application with clean separation between UI components, core engine logic, specialized services, and utilities. The system uses the Groq API with Llama models to process natural language into Mermaid diagram code, which gets rendered into interactive visualizations.
+This article walks through my implementation of an AI-powered project planning tool specifically designed for healthcare research projects. I built a system with three specialized agents — one generates tasks, another handles scheduling, and a third analyzes risks. These agents collaborate under a central “supervisor” that coordinates their work. 
 
-Users simply describe what they need — “Create a flowchart for an e-commerce order processing system” — and the AI generates a professional diagram with proper components and connections, along with an explanation of the architecture. The modular design makes it easy to maintain and extend with new features like additional diagram types or integration with other tools.
+The system leverages both general-purpose AI (OpenAI) and healthcare-specialized AI (Groq) to produce comprehensive project plans tailored to healthcare contexts. I designed everything to be configurable through external files rather than hardcoding, making it adaptable to different projects.
 
-Full Article : [https://medium.com/@learn-simplified/lets-build-solution-architect-ai-agent-a1b5fc333abe
+Full Article : [https://medium.com/@learn-simplified/my-making-of-project-manager-ai-agent-455d2f0bfdca
 
 
 ## Tech Stack  
 
-| Component | Technology | Purpose |
-|-----------|------------|---------|
-| Frontend | Streamlit | Interactive web dashboard |
-| UI Styling | Custom CSS | Professional enterprise theme |
-| Diagram Rendering | Streamlit-Mermaid | Visualize generated diagrams |
-| AI Models | Llama-3.3-70b, Llama-3.3-8b | Natural language processing |
-| API Integration | Groq | Access to high-performance LLMs |
-| Agent Framework | Agno | Structured AI agent capabilities |
-| Web Search | DuckDuckGo Tools | Research capabilities |
-| Configuration | YAML, JSON | Application settings |
-| Logging | Python logging | Error tracking and debugging |
-| Environment | python-dotenv | Environment variable management |
-| Project Structure | Modular architecture | Separation of concerns |
+| Component | Technology |
+|-----------|------------|
+| Programming Language | Python |
+| Agent Framework | LangGraph (ReAct agents) |
+| LLM Orchestration | LangChain |
+| Primary AI Model | OpenAI ChatGPT |
+| Domain-specific AI | Groq API |
+| Configuration | YAML, JSON |
+| Environment | dotenv |
+| Type Handling | typing_extensions |
 
 
 
@@ -88,13 +83,11 @@ Follow these steps to set up and run the  "My Making Of Project Manager AI Agent
 # Run - Hands-On Guide: My Making Of Project Manager AI Agent
   
    ```
-   streamlit run main.py   
+   python main.py   
    ```
    
 ## Closing Thoughts
 
-The future of AI in enterprise architecture will extend far beyond diagram generation. We’re moving toward AI systems that not only visualize architectures but actively participate in the design process — suggesting optimizations, identifying potential bottlenecks, and even generating implementation code.
+The future of AI in business lies in these collaborative systems where multiple specialized agents work together, each bringing domain expertise to complex problems. We’re moving beyond single-purpose AI tools toward intelligent ecosystems that mirror human team structures. Soon, these systems will extend beyond planning into execution — monitoring progress, adapting to changes, and even participating in decision-making.
 
-As models continue to improve, we’ll see AI architects that can simulate system performance under different conditions and automatically adjust designs based on specific requirements like scalability, security, or cost efficiency.
-
-Eventually, these systems will track industry best practices in real-time, ensuring designs always reflect current thinking. The Enterprise Architect AI we’ve built represents an early step toward this future — a future where AI doesn’t just document our technical decisions but actively helps shape them, leading to more robust, efficient, and innovative systems.
+Healthcare is just the beginning; similar approaches will transform financial services, manufacturing, and other industries. As these technologies mature, the boundary between human and AI contributions will blur, creating truly augmented organizations where people and machines collaborate as partners.
