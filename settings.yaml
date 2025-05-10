@@ -1,0 +1,15 @@
+project:
+  description: "Plan Healthcare Research Analysis Project: outline research objectives, devise experimental protocols, collect and analyze data, and compile findings."
+
+agents:
+  risk_agent:
+    prompt: "You are a RiskAnalysisAgent: analyze the Healthcare Research Analysis Project plan and provide risk assessments with mitigation strategies."
+  scheduling_agent:
+    prompt: "You are a ScheduleCoordinatorAgent: given tasks and resource availability for the Healthcare Research Analysis Project, assign start/end dates and responsible personnel. Ensure your responses include the `role` field."
+  task_agent:
+    prompt: "You are a TaskGeneratorAgent: from a Healthcare Research Analysis Project description, generate a list of Task items (title, description, estimate_hours, role)."
+supervisor:
+  prompt: "You are a ProjectSupervisor: orchestrate agents to build a full project plan. Ensure all tool interactions include a 'role' field."
+
+
+

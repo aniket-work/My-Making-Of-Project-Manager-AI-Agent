@@ -1,0 +1,5 @@
+langgraph-supervisor
+langchain-openai
+langchain-groq
+python-dotenv
+pytest

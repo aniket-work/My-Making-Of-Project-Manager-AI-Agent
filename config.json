@@ -1,0 +1,10 @@
+{
+  "llm": {
+    "model": "gpt-4o",
+    "temperature": 0.2
+  },
+  "groq": {
+    "api_key_env": "GROQ_API_KEY",
+    "model": "llama3-8b-8192"
+  }
+}
